@@ -1,0 +1,589 @@
+
+/* Reset some default styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f7;
+  color: #222;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 30px;
+  color: white;
+}
+
+.logo {
+  width: 120px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: rgb(11, 26, 156);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;  /* Increased from 1rem to 1.1rem */
+  transition: color 0.3s ease;
+}
+
+
+
+.nav-links li a:hover {
+  color: #f9b900;
+}
+
+/* Donate Now Button */
+.donate-now-button {
+  margin-left: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+
+.donate-now-button:hover {
+  background-color: #e6ad00;
+}
+/* Hero Section */
+.hero {
+  padding: 5px 10px;
+  background: linear-gradient(120deg, red, orange, yellow, green, blue, indigo, rgb(236, 238, 130));
+  color: lab(0% 0 0 / 0.884);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+  margin-top: 0;
+}
+
+.hero-text h1 {
+  font-size: 2.9em; /* Slightly smaller */
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.tagline {
+  font-size: 1.4em;
+  margin-bottom: 13px;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 1.1em;
+  max-width: 600px;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.hero-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.hero-donate, .hero-learn {
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+.hero-donate {
+  background: rgb(23, 20, 233);
+  color: #000;
+}
+
+.hero-learn {
+  background: rgb(233, 80, 20);
+  color: #000;
+  
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-image img,
+.hero-image-two img {
+  width: 100%;
+  max-width: 450px; /* smaller image */
+  border-radius: 12px;
+}
+
+
+
+.shake {
+  animation: shake 3s infinite ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+/* ===== MISSION SECTION START ===== */
+.mission-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* === Mission Card Box === */
+.mission-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px 20px;
+  width: 280px;
+  box-shadow: 0 8px 25px rgb(109 109 109 / 0.1);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.mission-card:hover {
+  box-shadow: 0 15px 30px rgb(109 109 109 / 0.25);
+}
+
+/* === Icon Container and Image Styling === */
+.about-icon {
+  margin-bottom: 15px;
+}
+
+.about-icon-img {
+  width: 55px;
+  filter: grayscale(40%);
+  transition: filter 0.3s ease;
+}
+
+.mission-card:hover .about-icon-img {
+  filter: grayscale(0);
+}
+
+/* === Section Title with Rainbow Underline === */
+.section-title.rainbow-underline {
+  text-align: center; 
+  position: relative;
+  display: block;
+  padding-bottom: 10px;
+  margin-bottom: 20px; /* Fixed from '20p' to '20px' */
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* === Actual Rainbow Underline Styling === */
+.section-title.rainbow-underline::after {
+  content: '';
+  position: absolute;
+  left: 50%;                       /* Start from center */
+  transform: translateX(-50%);     /* Center the underline */
+  bottom: 0;
+  height: 3px;
+  width: 20%;                      /* Adjust this to control underline length */
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  border-radius: 2px;
+}
+
+/* Donation Amount Button */
+.donation-amount {
+  font-size: 1.5rem;       /* Bigger font size */
+  font-weight: 700;        /* Bold for emphasis */
+  color: #ce104f;          /* Dark purple color */
+  background: transparent; /* Transparent background */
+  border: 2px solid #531c42; /* Optional border */
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;    /* Remove underline if it’s a link */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.donation-amount:hover {
+  background-color: #e0dd26;
+  color: white;
+
+  
+}
+
+/* ===== Shake animation on amount input when focused ===== */
+.donation-form-wrapper input[name="amount"]:focus {
+  animation: shake 0.3s ease;
+  animation-iteration-count: 1;
+}
+
+
+
+/* Donation Progress */
+.donation-progress {
+  margin: 35px 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.progress-bar {
+  background-color: #ddd;
+  border-radius: 10px;
+  height: 18px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background-color: #f9b900;
+  height: 100%;
+  width: 0;
+  transition: width 1s ease;
+}
+
+.progress-text {
+  margin-top: 8px;
+  font-weight: bold;
+ color: rgb(11, 26, 156);
+ text-align: center;
+}
+
+/* Donation Cards */
+.donation-cards {
+  margin-top: 35px;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* Donation form */
+#donation-form-section {
+  margin-top: 45px;
+  background: white;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  padding: 30px 30px;
+  box-shadow: 0 8px 25px rgb(109 109 109 / 0.1);
+}
+
+.donation-form-wrapper h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: rgb(11, 26, 156);
+}
+
+.donation-form-wrapper input[type="number"],
+.donation-form-wrapper input[type="text"],
+.donation-form-wrapper input[type="email"],
+.donation-form-wrapper input[type="tel"] {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1.5px solid #ddd;
+  font-size: 1rem;
+  outline-color: #7d4ae8;
+}
+
+.frequency-options {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+}
+
+.frequency-options label {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.donate-now-button {
+  background-color: #f9b900;
+  color: #291c53;
+  font-weight: 700;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: auto;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.donate-now-button:hover {
+  background-color: #e6ad00;
+}
+
+/* Impact Section */
+.impact-grid {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+.impact-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 25px rgb(109 109 109 / 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.impact-icon {
+  width: 70px;
+  margin-bottom: 20px;
+}
+
+/* Success Stories */
+.success-stories {
+  background: #f0ecf8;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.stories-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.story-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgb(109 109 109 / 0.1);
+  width: 320px;
+  padding: 20px;
+  text-align: center;
+}
+
+.story-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.story-card h3 {
+  margin-bottom: 15px;
+  color: #291c53;
+}
+
+/* Contact Section */
+.contact-section {
+  background: white;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 60px auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgb(109 109 109 / 0.15);
+  text-align: center;
+}
+
+.contact-subtext {
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.contact-container {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-form, .contact-info {
+  flex: 1 1 400px;
+  text-align: left;
+}
+
+.contact-form h3, .contact-info h3 {
+  margin-bottom: 25px;
+  color: #291c53;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1.5px solid #ddd;
+  font-size: 1rem;
+  outline-color: #7d4ae8;
+}
+
+.contact-form button {
+  background-color: #f9b900;
+  color: #291c53;
+  font-weight: 700;
+  border: none;
+  padding: 15px 0;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e6ad00;
+}
+
+.contact-info .info-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+.icon-circle {
+  background: #7d4ae8;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-circle img {
+  width: 28px;
+  filter: invert(1);
+}
+
+/* Footer */
+.footer {
+  background-color: #291c53;
+  color: white;
+  text-align: center;
+  padding: 18px 20px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* Stay Updated Section Styles */
+.stay-updated-section {
+  background-color: #f9f9f9; /* Light background */
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.stay-updated-container {
+  max-width: 520px;
+  width: 100%;
+}
+
+.stay-updated-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #222; /* Change later as needed */
+}
+
+.stay-updated-text {
+  font-size: 1.15rem;
+  margin-bottom: 30px;
+  color: #555; /* Change later as needed */
+}
+
+.stay-updated-form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.stay-updated-input {
+  flex: 1 1 280px;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  outline-color: #7d4ae8; /* Your accent color */
+  transition: border-color 0.3s ease;
+}
+
+.stay-updated-input:focus {
+  border-color: #7d4ae8; /* Accent color on focus */
+}
+
+.stay-updated-button {
+  background: #7d4ae8; /* Accent button color */
+  border: none;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.stay-updated-button:hover {
+  background-color: #5a37b7; /* Slightly darker on hover */
+}

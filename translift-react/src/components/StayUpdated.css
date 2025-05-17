@@ -1,0 +1,55 @@
+/* StayUpdated.css */
+
+.stay-updated {
+  background: linear-gradient(to right, #9b2dd1, #fd5d93);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.stay-updated-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.stay-updated h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.stay-updated p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.stay-updated-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.email-input {
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: none;
+  width: 300px;
+  max-width: 90%;
+  font-size: 16px;
+}
+
+.subscribe-button {
+  padding: 12px 24px;
+  background-color: white;
+  color: #9b2dd1;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.subscribe-button:hover {
+  background-color: #f1e4fc;
+}
